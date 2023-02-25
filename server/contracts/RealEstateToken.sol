@@ -66,3 +66,6 @@ contract RealEstateToken {
         emit RealEstateOwnershipTransferred(_realEstateId, previousOwner, newOwner);
     }
 }
+
+
+//0xe5A80EfC42609e9a0ce1B8C5308FdB06b83CD03b
