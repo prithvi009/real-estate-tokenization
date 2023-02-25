@@ -6,9 +6,11 @@ contract RealEstateToken {
     struct RealEstate {
         address owner;
         string addressOfLand;
-        // string[] images;
+        string[] images;
         string ownerName;
         uint purchaseDate;
+        uint landSize;
+        string landRegistrationNo;
         bool isForSale;
         uint salePrice;
     }
@@ -23,13 +25,15 @@ contract RealEstateToken {
     event RealEstateSetForSale(uint realEstateId, uint salePrice);
     event RealEstateSold(uint realEstateId, address buyer, uint salePrice);
     
-    function createRealEstate(string memory _address, string memory _ownerName, uint _purchaseDate) public {
+    function createRealEstate(string memory _address, string[] memory _images, string memory _landRegistrationNo, string memory _ownerName, uint _purchaseDate, uint _landSize) public {
         RealEstate memory newRealEstate = RealEstate({
             owner: msg.sender,
             addressOfLand: _address,
-            // images: _images,
+            images: _images,
             ownerName: _ownerName,
             purchaseDate: _purchaseDate,
+            landSize: _landSize,
+            landRegistrationNo: _landRegistrationNo,
             isForSale: false,
             salePrice: 0
         });
