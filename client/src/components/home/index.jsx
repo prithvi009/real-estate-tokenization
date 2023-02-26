@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from '../navbar'
 
-const Home = () => {
+const Home = ({isTopOfPage , isConnected}) => {
   return (
-    <div>Home</div>
+    <div>
+        
+    </div>
   )
 }
 

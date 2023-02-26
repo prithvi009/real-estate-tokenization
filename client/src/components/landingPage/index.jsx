@@ -1,11 +1,10 @@
 import React from 'react'
-import CreateNft from '../createProperty';
 import Navbar from '../navbar'
 
-const LandingPage = () => {
+const LandingPage = ({isTopOfPage, onConnect}) => {
   return (
     <>
-        {/* <Navbar isTopOfPage={isTopOfPage} onConnect={onConnect} /> */}
+        <Navbar isTopOfPage={isTopOfPage} onConnect={onConnect} />
     
         <div className='w-full mt-[150px] text-primary-200 mb-[65px]'>
 

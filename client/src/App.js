@@ -1,6 +1,8 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import Navbar from './components/navbar';
+import {BrowserRouter as Router , Navigate, Routes, Route} from "react-router-dom";
+import LandingPage from "./components/landingPage";
+import Home from './components/home';
 
 import Web3 from "web3";
 
@@ -66,7 +68,18 @@ function App() {
   
   return (
     <div className="App">
-     <Navbar isTopOfPage={isTopOfPage} onConnect={onConnect}/>
+     
+
+      <Router>
+        {!isConnected && (
+          <Routes>
+            <Route path="/" element={<LandingPage isTopOfPage={isTopOfPage} onConnect={onConnect}/>}/>
+          </Routes>
+        )}
+        <Routes>
+            <Route path="/" element={<Home isTopOfPage={isTopOfPage} onConnect={onConnect}/>}/>
+        </Routes>
+     </Router>
     </div>
   );
 }
