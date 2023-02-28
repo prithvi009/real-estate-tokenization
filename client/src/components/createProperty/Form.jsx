@@ -15,8 +15,6 @@ const Form = () => {
                 <input type="date" placeholder='Date of Purchase' name='land_size' className='col-span-2 rounded-md h-14 text-lg bg-[#F6F6F6]'/>
                 <input type="file" src="" alt="" className='col-span-2  mx-auto rounded-md h-14  text-lg text-center p-2 bg-[#F6F6F6] '/>
                 <ActionButton/>
-                
-
             </div>
 
         </form>
